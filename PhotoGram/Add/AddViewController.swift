@@ -6,6 +6,15 @@
 //
 
 import UIKit
+import SeSacPhotoFramework
+
+//delegate pattern  1.프로토콜 생성
+protocol PassDataDelegate {
+    func receiveDate(date: Date)
+}
+protocol ImagePassDelegate {
+    func receiveDate(systemName:String)
+}
 
 
 class AddViewController: BaseViewController {
@@ -19,25 +28,51 @@ class AddViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(selectImageNotificationObserver), name: NSNotification.Name("SelectImage"), object: nil)
+//        ClassOpenExample.publicExample()
+//        ClassPubliceExample.publicExample()
+//        ClassInternalExample.internalExample()
         // Do any additional setup after loading the view.
     }
     
-    @objc func selectImageNotificationObserver(notification: NSNotification){
-        print("selectimage")
-        print(notification.userInfo?["name"])
-        print(notification.userInfo?["sample"])
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(#function)
         
-        if let name = notification.userInfo?["name"] as? String {
-            mainView.photoImageView.image = UIImage(systemName: name)
-        }
-        
+        sesacShowActivityViewController(image: UIImage(systemName: "star.fill")!, url: "hello", text: "hi")
+//        NotificationCenter.default.addObserver(self, selector: #selector(selectImageNotificationObserver), name: .selectImage, object: nil)
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+//        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("SelectImage"), object: nil)
+    }
+    
+//    @objc func selectImageNotificationObserver(notification: NSNotification){
+//        print(#function)
+//        if let name = notification.userInfo?["name"] as? String {
+//            mainView.photoImageView.image = UIImage(systemName: name)
+//        }
+//
+//    }
     let word = ["Apple","Banana","Cookie","Cake","Sky"]
     @objc func searchButtonTapped(){
         
-        NotificationCenter.default.post(name: NSNotification.Name("RecommandKeyword"), object: nil, userInfo: ["word":word.randomElement()!])
-        present(SearchViewController(), animated: true)
+//        NotificationCenter.default.post(name: NSNotification.Name("RecommandKeyword"), object: nil, userInfo: ["word":word.randomElement()!])
+        navigationController?.pushViewController(SearchViewController(), animated: true)
+    }
+    // 5. delegate = self
+    @objc func dateButtonTapped(){
+        let vc = DateViewController()
+        vc.delegate = self
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    // 5. delegate = self
+    @objc func leftsearchProtocolButtonTapped(){
+        let vc = SearchViewController()
+        // 대리자 선언
+        vc.delegate = self
+       present(vc, animated: true)
     }
     
 
@@ -45,13 +80,26 @@ class AddViewController: BaseViewController {
         super.setUpView()
         print("Add ConfigureView")
         mainView.searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
+        mainView.leftsearchProtocolButton.addTarget(self, action: #selector(leftsearchProtocolButtonTapped), for: .touchUpInside)
+        mainView.dateButton.addTarget(self, action: #selector(dateButtonTapped), for: .touchUpInside)
     }
     override func setConstraints() {
         super.setConstraints()
         print("Add setConstraints")
        
     }
-    
+}
 
+// 4. protocol 채택 후 구현
+extension AddViewController: PassDataDelegate {
+    func receiveDate(date: Date) {
+        mainView.dateButton.setTitle(DateFormatter.convertDate(date: date), for: .normal)
+    }
+}
+
+extension AddViewController: ImagePassDelegate {
+    func receiveDate(systemName: String) {
+        mainView.photoImageView.image = UIImage(systemName: systemName)
+    }
 }
 

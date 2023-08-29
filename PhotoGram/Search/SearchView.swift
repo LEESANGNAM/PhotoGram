@@ -22,7 +22,7 @@ class SearchView: BaseView {
         return view
     }()
     
-    func collectionViewLayout() -> UICollectionViewFlowLayout {
+    private func collectionViewLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 8
         layout.minimumInteritemSpacing = 8
@@ -38,7 +38,7 @@ class SearchView: BaseView {
     
     override func setConstraints() {
         searchBar.snp.makeConstraints { make in
-            make.top.horizontalEdges.equalToSuperview()
+            make.top.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
         }
         collectionView.snp.makeConstraints { make in
             make.horizontalEdges.bottom.equalToSuperview()

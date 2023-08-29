@@ -10,6 +10,9 @@ import UIKit
 class SearchViewController: BaseViewController {
     
     let mainView = SearchView()
+    
+    // 델리게이트 타입 선언
+    var delegate: ImagePassDelegate?
    
     let imageList = ["pencil","star","star.fill","xmark","person.circle"]
     
@@ -19,7 +22,6 @@ class SearchViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         NotificationCenter.default.addObserver(self, selector: #selector(recommandKeywordNotificationObserver), name: NSNotification.Name("RecommandKeyword"), object: nil)
         
     }
@@ -36,7 +38,6 @@ class SearchViewController: BaseViewController {
     }
     override func setConstraints() {
         super.setConstraints()
-        
         mainView.collectionView.delegate = self
         mainView.collectionView.dataSource = self
     }
@@ -57,8 +58,10 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         print(imageList[indexPath.item])
+//        NotificationCenter.default.post(name: NSNotification.Name("SelectImage"), object: nil, userInfo: ["name":imageList[indexPath.item],"sample":"고래밥"])
         
-        NotificationCenter.default.post(name: NSNotification.Name("SelectImage"), object: nil, userInfo: ["name":imageList[indexPath.item],"sample":"고래밥"])
+        // 값 넘겨
+        delegate?.receiveDate(systemName: imageList[indexPath.item])
         
         dismiss(animated: true)
     }

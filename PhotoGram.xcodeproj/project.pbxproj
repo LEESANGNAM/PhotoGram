@@ -20,7 +20,44 @@
 		D6B4D7512A9C3377007D7935 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B4D7502A9C3377007D7935 /* SearchView.swift */; };
 		D6B4D7532A9C3667007D7935 /* BaseCollectionViewcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B4D7522A9C3667007D7935 /* BaseCollectionViewcell.swift */; };
 		D6B4D7552A9C37EE007D7935 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B4D7542A9C37EE007D7935 /* SearchCollectionViewCell.swift */; };
+		D6CD179C2A9D7BD600732C3E /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD179B2A9D7BD600732C3E /* Notification+Extension.swift */; };
+		D6CD179E2A9D7C7200732C3E /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD179D2A9D7C7200732C3E /* DateView.swift */; };
+		D6CD17A02A9D7DBD00732C3E /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD179F2A9D7DBD00732C3E /* DateViewController.swift */; };
+		D6CD17A42A9D8E8700732C3E /* DateFormat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD17A32A9D8E8700732C3E /* DateFormat+Extension.swift */; };
+		D6CD17E92A9D9BB300732C3E /* SeSacPhotoFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CD17E52A9D9B8D00732C3E /* SeSacPhotoFramework.framework */; };
+		D6CD17EA2A9D9BB300732C3E /* SeSacPhotoFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6CD17E52A9D9B8D00732C3E /* SeSacPhotoFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6CD17E42A9D9B8D00732C3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6CD17DF2A9D9B8D00732C3E /* SeSacPhotoFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D6CD17AF2A9D92B600732C3E;
+			remoteInfo = SeSacPhotoFramework;
+		};
+		D6CD17E62A9D9B8D00732C3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6CD17DF2A9D9B8D00732C3E /* SeSacPhotoFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D6CD17B92A9D92B600732C3E;
+			remoteInfo = SeSacPhotoFrameworkTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D6CD17EB2A9D9BB300732C3E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D6CD17EA2A9D9BB300732C3E /* SeSacPhotoFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D6B4D72B2A9C1D63007D7935 /* PhotoGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +74,11 @@
 		D6B4D7502A9C3377007D7935 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D6B4D7522A9C3667007D7935 /* BaseCollectionViewcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewcell.swift; sourceTree = "<group>"; };
 		D6B4D7542A9C37EE007D7935 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6CD179B2A9D7BD600732C3E /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		D6CD179D2A9D7C7200732C3E /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		D6CD179F2A9D7DBD00732C3E /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		D6CD17A32A9D8E8700732C3E /* DateFormat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormat+Extension.swift"; sourceTree = "<group>"; };
+		D6CD17DF2A9D9B8D00732C3E /* SeSacPhotoFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SeSacPhotoFramework.xcodeproj; path = ../SeSacPhotoFramework/SeSacPhotoFramework.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6CD17E92A9D9BB300732C3E /* SeSacPhotoFramework.framework in Frameworks */,
 				D6B4D7442A9C1E1B007D7935 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,8 +97,10 @@
 		D6B4D7222A9C1D63007D7935 = {
 			isa = PBXGroup;
 			children = (
+				D6CD17DF2A9D9B8D00732C3E /* SeSacPhotoFramework.xcodeproj */,
 				D6B4D72D2A9C1D63007D7935 /* PhotoGram */,
 				D6B4D72C2A9C1D63007D7935 /* Products */,
+				D6CD17E82A9D9BB300732C3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +115,7 @@
 		D6B4D72D2A9C1D63007D7935 /* PhotoGram */ = {
 			isa = PBXGroup;
 			children = (
+				D6CD179A2A9D7BBC00732C3E /* Extension */,
 				D6B4D74D2A9C2FCC007D7935 /* Add */,
 				D6B4D7482A9C272C007D7935 /* Search */,
 				D6B4D7452A9C23EF007D7935 /* Base */,
@@ -107,8 +153,35 @@
 			children = (
 				D6B4D7322A9C1D63007D7935 /* AddViewController.swift */,
 				D6B4D74E2A9C2FF8007D7935 /* AddView.swift */,
+				D6CD179D2A9D7C7200732C3E /* DateView.swift */,
+				D6CD179F2A9D7DBD00732C3E /* DateViewController.swift */,
 			);
 			path = Add;
+			sourceTree = "<group>";
+		};
+		D6CD179A2A9D7BBC00732C3E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D6CD179B2A9D7BD600732C3E /* Notification+Extension.swift */,
+				D6CD17A32A9D8E8700732C3E /* DateFormat+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D6CD17E02A9D9B8D00732C3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6CD17E52A9D9B8D00732C3E /* SeSacPhotoFramework.framework */,
+				D6CD17E72A9D9B8D00732C3E /* SeSacPhotoFrameworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6CD17E82A9D9BB300732C3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +194,7 @@
 				D6B4D7272A9C1D63007D7935 /* Sources */,
 				D6B4D7282A9C1D63007D7935 /* Frameworks */,
 				D6B4D7292A9C1D63007D7935 /* Resources */,
+				D6CD17EB2A9D9BB300732C3E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,12 +237,35 @@
 			);
 			productRefGroup = D6B4D72C2A9C1D63007D7935 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D6CD17E02A9D9B8D00732C3E /* Products */;
+					ProjectRef = D6CD17DF2A9D9B8D00732C3E /* SeSacPhotoFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D6B4D72A2A9C1D63007D7935 /* PhotoGram */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D6CD17E52A9D9B8D00732C3E /* SeSacPhotoFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SeSacPhotoFramework.framework;
+			remoteRef = D6CD17E42A9D9B8D00732C3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D6CD17E72A9D9B8D00732C3E /* SeSacPhotoFrameworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SeSacPhotoFrameworkTests.xctest;
+			remoteRef = D6CD17E62A9D9B8D00732C3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D6B4D7292A9C1D63007D7935 /* Resources */ = {
@@ -187,11 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6CD179C2A9D7BD600732C3E /* Notification+Extension.swift in Sources */,
 				D6B4D74F2A9C2FF8007D7935 /* AddView.swift in Sources */,
 				D6B4D74A2A9C2746007D7935 /* SearchViewController.swift in Sources */,
 				D6B4D7332A9C1D63007D7935 /* AddViewController.swift in Sources */,
+				D6CD17A42A9D8E8700732C3E /* DateFormat+Extension.swift in Sources */,
 				D6B4D7472A9C2414007D7935 /* BaseViewController.swift in Sources */,
+				D6CD17A02A9D7DBD00732C3E /* DateViewController.swift in Sources */,
 				D6B4D7552A9C37EE007D7935 /* SearchCollectionViewCell.swift in Sources */,
+				D6CD179E2A9D7C7200732C3E /* DateView.swift in Sources */,
 				D6B4D7532A9C3667007D7935 /* BaseCollectionViewcell.swift in Sources */,
 				D6B4D7512A9C3377007D7935 /* SearchView.swift in Sources */,
 				D6B4D74C2A9C2EB7007D7935 /* BaseView.swift in Sources */,
