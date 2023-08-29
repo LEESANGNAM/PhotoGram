@@ -38,7 +38,7 @@ class AddViewController: BaseViewController {
         super.viewWillAppear(animated)
         print(#function)
         
-        sesacShowActivityViewController(image: UIImage(systemName: "star.fill")!, url: "hello", text: "hi")
+//        sesacShowActivityViewController(image: UIImage(systemName: "star.fill")!, url: "hello", text: "hi")
 //        NotificationCenter.default.addObserver(self, selector: #selector(selectImageNotificationObserver), name: .selectImage, object: nil)
     }
     
@@ -74,6 +74,27 @@ class AddViewController: BaseViewController {
         vc.delegate = self
        present(vc, animated: true)
     }
+    //클로저
+    @objc func titleButtonTapped(){
+        let vc = TitleViewController()
+        // 클로저 함수
+        vc.completionHandler = { text,num,push in
+            self.mainView.titleButton.setTitle(text, for: .normal)
+            print("test: ",text,"num : ",num,"push : ",push)
+            print("completionHandler")
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    //클로저
+    @objc func contentButtonTapped(){
+        let vc = ContentViewController()
+        // 클로저 함수
+        vc.completionHandler = { text in
+            self.mainView.titleTextView.text = text
+            print("completionHandler")
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 
     override func setUpView() {
@@ -82,6 +103,8 @@ class AddViewController: BaseViewController {
         mainView.searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
         mainView.leftsearchProtocolButton.addTarget(self, action: #selector(leftsearchProtocolButtonTapped), for: .touchUpInside)
         mainView.dateButton.addTarget(self, action: #selector(dateButtonTapped), for: .touchUpInside)
+        mainView.titleButton.addTarget(self, action: #selector(titleButtonTapped), for: .touchUpInside)
+        mainView.contentButton.addTarget(self, action: #selector(contentButtonTapped), for: .touchUpInside)
     }
     override func setConstraints() {
         super.setConstraints()
