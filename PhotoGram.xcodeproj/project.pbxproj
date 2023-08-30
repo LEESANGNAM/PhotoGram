@@ -31,6 +31,7 @@
 		D6CD17F12A9DC75100732C3E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD17F02A9DC75100732C3E /* WebViewController.swift */; };
 		D6CD180A2A9EC74600732C3E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD18092A9EC74600732C3E /* APIService.swift */; };
 		D6CD180C2A9EEBDB00732C3E /* URLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD180B2A9EEBDB00732C3E /* URLSessionViewController.swift */; };
+		D6CD180F2A9F8C2100732C3E /* AlertActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD180E2A9F8C2100732C3E /* AlertActionType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		D6CD17F02A9DC75100732C3E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D6CD18092A9EC74600732C3E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		D6CD180B2A9EEBDB00732C3E /* URLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionViewController.swift; sourceTree = "<group>"; };
+		D6CD180E2A9F8C2100732C3E /* AlertActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				D6B4D74D2A9C2FCC007D7935 /* Add */,
 				D6B4D7482A9C272C007D7935 /* Search */,
 				D6B4D7452A9C23EF007D7935 /* Base */,
+				D6CD180D2A9F8BFB00732C3E /* Enum */,
 				D6B4D72E2A9C1D63007D7935 /* AppDelegate.swift */,
 				D6B4D7302A9C1D63007D7935 /* SceneDelegate.swift */,
 				D6CD17F02A9DC75100732C3E /* WebViewController.swift */,
@@ -205,6 +208,14 @@
 				D6CD180B2A9EEBDB00732C3E /* URLSessionViewController.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D6CD180D2A9F8BFB00732C3E /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				D6CD180E2A9F8C2100732C3E /* AlertActionType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +334,7 @@
 				D6CD17F12A9DC75100732C3E /* WebViewController.swift in Sources */,
 				D6B4D7512A9C3377007D7935 /* SearchView.swift in Sources */,
 				D6B4D74C2A9C2EB7007D7935 /* BaseView.swift in Sources */,
+				D6CD180F2A9F8C2100732C3E /* AlertActionType.swift in Sources */,
 				D6B4D72F2A9C1D63007D7935 /* AppDelegate.swift in Sources */,
 				D6CD180A2A9EC74600732C3E /* APIService.swift in Sources */,
 				D6B4D7312A9C1D63007D7935 /* SceneDelegate.swift in Sources */,
