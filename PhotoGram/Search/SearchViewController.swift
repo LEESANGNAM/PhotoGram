@@ -23,6 +23,8 @@ class SearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(recommandKeywordNotificationObserver), name: NSNotification.Name("RecommandKeyword"), object: nil)
+        mainView.searchBar.becomeFirstResponder()
+        mainView.searchBar.delegate = self
         
     }
     
@@ -42,6 +44,12 @@ class SearchViewController: BaseViewController {
         mainView.collectionView.dataSource = self
     }
 }
+extension SearchViewController: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        mainView.searchBar.resignFirstResponder()
+    }
+}
+
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     

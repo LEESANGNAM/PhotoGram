@@ -29,6 +29,8 @@
 		D6CD17ED2A9DB54200732C3E /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD17EC2A9DB54100732C3E /* TitleViewController.swift */; };
 		D6CD17EF2A9DC0CD00732C3E /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD17EE2A9DC0CD00732C3E /* ContentViewController.swift */; };
 		D6CD17F12A9DC75100732C3E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD17F02A9DC75100732C3E /* WebViewController.swift */; };
+		D6CD180A2A9EC74600732C3E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD18092A9EC74600732C3E /* APIService.swift */; };
+		D6CD180C2A9EEBDB00732C3E /* URLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CD180B2A9EEBDB00732C3E /* URLSessionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		D6CD17EC2A9DB54100732C3E /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		D6CD17EE2A9DC0CD00732C3E /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		D6CD17F02A9DC75100732C3E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D6CD18092A9EC74600732C3E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D6CD180B2A9EEBDB00732C3E /* URLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,16 +125,17 @@
 		D6B4D72D2A9C1D63007D7935 /* PhotoGram */ = {
 			isa = PBXGroup;
 			children = (
+				D6CD18082A9EC73200732C3E /* Network */,
 				D6CD179A2A9D7BBC00732C3E /* Extension */,
 				D6B4D74D2A9C2FCC007D7935 /* Add */,
 				D6B4D7482A9C272C007D7935 /* Search */,
 				D6B4D7452A9C23EF007D7935 /* Base */,
 				D6B4D72E2A9C1D63007D7935 /* AppDelegate.swift */,
 				D6B4D7302A9C1D63007D7935 /* SceneDelegate.swift */,
+				D6CD17F02A9DC75100732C3E /* WebViewController.swift */,
 				D6B4D7372A9C1D65007D7935 /* Assets.xcassets */,
 				D6B4D7392A9C1D65007D7935 /* LaunchScreen.storyboard */,
 				D6B4D73C2A9C1D65007D7935 /* Info.plist */,
-				D6CD17F02A9DC75100732C3E /* WebViewController.swift */,
 			);
 			path = PhotoGram;
 			sourceTree = "<group>";
@@ -191,6 +196,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6CD18082A9EC73200732C3E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D6CD18092A9EC74600732C3E /* APIService.swift */,
+				D6CD180B2A9EEBDB00732C3E /* URLSessionViewController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,12 +317,14 @@
 				D6CD17A02A9D7DBD00732C3E /* DateViewController.swift in Sources */,
 				D6B4D7552A9C37EE007D7935 /* SearchCollectionViewCell.swift in Sources */,
 				D6CD179E2A9D7C7200732C3E /* DateView.swift in Sources */,
+				D6CD180C2A9EEBDB00732C3E /* URLSessionViewController.swift in Sources */,
 				D6B4D7532A9C3667007D7935 /* BaseCollectionViewcell.swift in Sources */,
 				D6CD17ED2A9DB54200732C3E /* TitleViewController.swift in Sources */,
 				D6CD17F12A9DC75100732C3E /* WebViewController.swift in Sources */,
 				D6B4D7512A9C3377007D7935 /* SearchView.swift in Sources */,
 				D6B4D74C2A9C2EB7007D7935 /* BaseView.swift in Sources */,
 				D6B4D72F2A9C1D63007D7935 /* AppDelegate.swift in Sources */,
+				D6CD180A2A9EC74600732C3E /* APIService.swift in Sources */,
 				D6B4D7312A9C1D63007D7935 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
