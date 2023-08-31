@@ -23,6 +23,10 @@ class DateViewController: BaseViewController{
         super.viewDidLoad()
         
     }
+    deinit {
+        print("deinit",self)
+    }
+
     
     //delegate pattern 3. 값 전달 시점 정하기
     override func viewDidDisappear(_ animated: Bool) {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D69D84512AA01A6D0042F13D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D84502AA01A6D0042F13D /* HomeView.swift */; };
+		D69D84532AA01A740042F13D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69D84522AA01A740042F13D /* HomeViewController.swift */; };
 		D6B4D72F2A9C1D63007D7935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B4D72E2A9C1D63007D7935 /* AppDelegate.swift */; };
 		D6B4D7312A9C1D63007D7935 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B4D7302A9C1D63007D7935 /* SceneDelegate.swift */; };
 		D6B4D7332A9C1D63007D7935 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B4D7322A9C1D63007D7935 /* AddViewController.swift */; };
@@ -66,6 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D69D84502AA01A6D0042F13D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D69D84522AA01A740042F13D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D6B4D72B2A9C1D63007D7935 /* PhotoGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B4D72E2A9C1D63007D7935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6B4D7302A9C1D63007D7935 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D69D844F2AA01A570042F13D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D69D84522AA01A740042F13D /* HomeViewController.swift */,
+				D69D84502AA01A6D0042F13D /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		D6B4D7222A9C1D63007D7935 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +140,7 @@
 		D6B4D72D2A9C1D63007D7935 /* PhotoGram */ = {
 			isa = PBXGroup;
 			children = (
+				D69D844F2AA01A570042F13D /* Home */,
 				D6CD18082A9EC73200732C3E /* Network */,
 				D6CD179A2A9D7BBC00732C3E /* Extension */,
 				D6B4D74D2A9C2FCC007D7935 /* Add */,
@@ -325,6 +339,7 @@
 				D6B4D7332A9C1D63007D7935 /* AddViewController.swift in Sources */,
 				D6CD17A42A9D8E8700732C3E /* DateFormat+Extension.swift in Sources */,
 				D6B4D7472A9C2414007D7935 /* BaseViewController.swift in Sources */,
+				D69D84532AA01A740042F13D /* HomeViewController.swift in Sources */,
 				D6CD17A02A9D7DBD00732C3E /* DateViewController.swift in Sources */,
 				D6B4D7552A9C37EE007D7935 /* SearchCollectionViewCell.swift in Sources */,
 				D6CD179E2A9D7C7200732C3E /* DateView.swift in Sources */,
@@ -333,6 +348,7 @@
 				D6CD17ED2A9DB54200732C3E /* TitleViewController.swift in Sources */,
 				D6CD17F12A9DC75100732C3E /* WebViewController.swift in Sources */,
 				D6B4D7512A9C3377007D7935 /* SearchView.swift in Sources */,
+				D69D84512AA01A6D0042F13D /* HomeView.swift in Sources */,
 				D6B4D74C2A9C2EB7007D7935 /* BaseView.swift in Sources */,
 				D6CD180F2A9F8C2100732C3E /* AlertActionType.swift in Sources */,
 				D6B4D72F2A9C1D63007D7935 /* AppDelegate.swift in Sources */,

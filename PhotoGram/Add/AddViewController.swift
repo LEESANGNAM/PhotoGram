@@ -35,6 +35,11 @@ class AddViewController: BaseViewController {
 //        ClassPubliceExample.publicExample()
 //        ClassInternalExample.internalExample()
     }
+    
+    deinit {
+        print("deinit",self)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print(#function)
@@ -77,8 +82,14 @@ extension AddViewController: UIImagePickerControllerDelegate, UINavigationContro
         }
         gallay.delegate = self
         gallay.sourceType = .photoLibrary // 사진만 가져오는건 권한 설정 필요없다.
-        gallay.allowsEditing = true
+//        gallay.allowsEditing = true
         present(gallay, animated: true)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            self.mainView.photoImageView.image = image
+            dismiss(animated: true)
+        }
     }
     // navigationRightButton
     @objc func naviSearchButtonTapped(){
@@ -92,7 +103,6 @@ extension AddViewController: UIImagePickerControllerDelegate, UINavigationContro
                 self.dismiss(animated: true)
             }
         }
-        
     }
    
 }
@@ -101,7 +111,8 @@ extension AddViewController {
     // imageView rightbutton
     @objc func searchButtonTapped(){
 //        NotificationCenter.default.post(name: NSNotification.Name("RecommandKeyword"), object: nil, userInfo: ["word":word.randomElement()!])
-        navigationController?.pushViewController(SearchViewController(), animated: true)
+        let vc = HomeViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     @objc func selectImageNotificationObserver(notification: NSNotification){
         print(#function)

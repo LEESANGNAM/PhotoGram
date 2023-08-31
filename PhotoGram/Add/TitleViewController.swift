@@ -18,7 +18,10 @@ class TitleViewController: BaseViewController {
     //1. 클로저 값전달 준비
     var completionHandler: ((String,Int,Bool) -> Void)?
     
-    
+    deinit {
+        print("deinit",self)
+    }
+
     
     override func setUpView() {
         super.setUpView()
