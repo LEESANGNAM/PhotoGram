@@ -30,7 +30,7 @@ class AddViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        APIService.shared.callRequest()
+//        APIService.shared.callRequest(query: "sky")
 //        ClassOpenExample.publicExample()
 //        ClassPubliceExample.publicExample()
 //        ClassInternalExample.internalExample()

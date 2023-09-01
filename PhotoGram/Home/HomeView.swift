@@ -15,8 +15,8 @@ class HomeView: BaseView {
         let view = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
         view.register(SearchCollectionViewCell.self, forCellWithReuseIdentifier: "SearchCollectionViewCell")
         view.collectionViewLayout = collectionViewLayout()
-        view.delegate = self
-        view.dataSource = self
+//        view.delegate = self
+//        view.dataSource = self
         return view
     }()
     
@@ -39,24 +39,3 @@ class HomeView: BaseView {
     }
 }
 
-extension HomeView: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionViewCell", for: indexPath) as? SearchCollectionViewCell else {return UICollectionViewCell()}
-        cell.imageView.backgroundColor = .systemBlue
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(#function)
-        
-        delegate?.didSelectItemAt(indexPath: indexPath)
-        
-    }
-    
-    
-}
